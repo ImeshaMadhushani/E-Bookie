@@ -1,0 +1,24 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fef9f2;
+    /* Light background color */
+}
+
+h1,
+h2,
+h3 {
+    color: #789dbc;
+    /* Main color from your palette */
+}
+
+a {
+    color: #fe3e3e;
+    /* Accent color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
