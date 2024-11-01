@@ -9,6 +9,7 @@ import FavoritesPage from './pages/FavoritesPage';
 import Login from './pages/Login';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
+import './animations.css';
 
 const App = () => {
   return (

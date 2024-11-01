@@ -1,22 +1,32 @@
 // src/pages/BookCollection.js
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import BookCard from '../components/BookCard';
+
+const books = [
+    {
+        title: 'The Great Gatsby',
+        author: 'F. Scott Fitzgerald',
+        rating: 4.5,
+        image: 'https://example.com/gatsby.jpg', // Replace with actual image URL
+    },
+    {
+        title: '1984',
+        author: 'George Orwell',
+        rating: 4.8,
+        image: 'https://example.com/1984.jpg', // Replace with actual image URL
+    },
+    // Add more books here...
+];
 
 const BookCollection = () => {
     return (
         <div className="p-4 bg-gray-100">
             <h1 className="text-3xl font-bold text-blue-800 mb-4">Book Collection</h1>
-            {/* Replace with your book list */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {/* Sample Book Item */}
-                <div className="bg-white shadow rounded-lg p-4">
-                    <h2 className="font-semibold">Book Title</h2>
-                    <p className="text-gray-600">Author: Author Name</p>
-                    <p className="text-gray-600">Description: Short description of the book.</p>
-                    <Link to="/books/1" className="text-blue-600 hover:underline">View Details</Link>
-                </div>
-                {/* Repeat for more books */}
+                {books.map((book, index) => (
+                    <BookCard key={index} book={book} />
+                ))}
             </div>
         </div>
     );
