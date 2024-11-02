@@ -2,12 +2,15 @@
 
 import React from 'react';
 
+// Use a common book image URL
+const commonBookImage = "https://img.icons8.com/ios/452/open-book.png"; // Updated book vector image URL
+
 const FavoritesPage = () => {
     // Sample placeholder data for favorite books (can be replaced with dynamic data in future)
     const favoriteBooks = [
-        { id: 1, title: "The Great Gatsby", author: "F. Scott Fitzgerald", image: "https://via.placeholder.com/150" },
-        { id: 2, title: "1984", author: "George Orwell", image: "https://via.placeholder.com/150" },
-        { id: 3, title: "To Kill a Mockingbird", author: "Harper Lee", image: "https://via.placeholder.com/150" },
+        { id: 1, title: "The Great Gatsby", author: "F. Scott Fitzgerald", image: commonBookImage },
+        { id: 2, title: "1984", author: "George Orwell", image: commonBookImage },
+        { id: 3, title: "To Kill a Mockingbird", author: "Harper Lee", image: commonBookImage },
     ];
 
     return (
@@ -20,7 +23,7 @@ const FavoritesPage = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {favoriteBooks.map(book => (
                         <div key={book.id} className="bg-white rounded-lg shadow-md p-4 transform hover:scale-105 transition-transform duration-200">
-                            <img src={book.image} alt={book.title} className="w-full h-48 object-cover rounded-t-lg" />
+                            <img src={book.image} alt={book.title} className="w-40 h-56 object-cover rounded-t-lg" />
                             <div className="mt-4">
                                 <h2 className="text-xl font-semibold text-gray-800">{book.title}</h2>
                                 <p className="text-gray-600 mb-2">{book.author}</p>

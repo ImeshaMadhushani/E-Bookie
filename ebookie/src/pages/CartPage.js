@@ -2,6 +2,9 @@
 
 import React from 'react';
 
+// Use a common book image
+const commonBookImage = "https://img.icons8.com/ios/452/open-book.png"; // Updated book vector image URL
+
 const CartPage = () => {
     // Mock data for cart items (replace with actual cart state or backend data)
     const cartItems = [
@@ -11,7 +14,7 @@ const CartPage = () => {
             author: "F. Scott Fitzgerald",
             price: 12.99,
             quantity: 1,
-            image: "https://example.com/great-gatsby.jpg",
+            image: commonBookImage, // Using the common book image
         },
         {
             id: 2,
@@ -19,7 +22,7 @@ const CartPage = () => {
             author: "Harper Lee",
             price: 14.99,
             quantity: 2,
-            image: "https://example.com/to-kill-a-mockingbird.jpg",
+            image: commonBookImage, // Using the common book image
         },
     ];
 
